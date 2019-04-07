@@ -1,5 +1,5 @@
 
-package = "heroku-openresty"
+package = "heroku16-openresty"
 version = "v-1"
 
 source = {
