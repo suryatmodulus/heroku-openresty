@@ -2,7 +2,7 @@
 
 This is a Lua rock containing binaries for running OpenResty on Heroku. It's
 designed to be used in conjunction with the [Lua
-buildpack](https://github.com/leafo/heroku-buildpack-lua).
+buildpack](https://github.com/suryatmodulus/heroku16-buildpack-lua).
 
 ## What it does
 
@@ -27,24 +27,24 @@ work.
 
 ### Installing the rock
 
-Create a new app with the [Lua buildpack](https://github.com/leafo/heroku-buildpack-lua).
+Create a new app with the [Lua buildpack](https://github.com/suryatmodulus/heroku16-buildpack-lua).
 
 ```bash
-$ heroku create --buildpack http://github.com/leafo/heroku-buildpack-lua.git
+$ heroku create --buildpack http://github.com/suryatmodulus/heroku16-buildpack-lua.git
 ```
 
 Add to your rockspec dependencies:
 
 ```lua
 dependencies = {
-  "https://raw.github.com/leafo/heroku-openresty/master/heroku-openresty-1.2.8.6-1.rockspec"
+  "https://raw.github.com/suryatmodulus/heroku-openresty/master/heroku-openresty-1.2.8.6-1.rockspec"
 }
 ```
 
 ### Running Nginx
 
 *These directions are for manually running Nginx, if you prefer to use a
-framework then I recommend checking out: <http://leafo.net/lapis>.*
+framework then I recommend checking out: <http://suryatmodulus.net/lapis>.*
 
 Create a basic `nginx.conf`, this is the one from the OpenResty guide (with the
 addition of `daemon off` and `${{PORT}}`):
@@ -115,4 +115,4 @@ upstream.
 
 ## Version
 
-* OpenResty 1.5.11.1 `--with-http_postgres_module`
+* OpenResty v1 `--with-http_postgres_module`
